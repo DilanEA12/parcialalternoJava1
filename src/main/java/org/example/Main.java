@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -12,7 +14,8 @@ public class Main {
         String redColor="\u001B[33m";
         String yellowColor="\u001B[33m";
         String correoUsusarioBaseDatos, contraseñaUsuarioBaseDatos, nombreUsuario, correoUsuario,
-                contraseñaUsuario, nombreUsuarioBaseDatos;
+                contraseñaUsuario, nombreUsuarioBaseDatos, confirmarSalida;
+        ArrayList<HashMap<String,Object>> prendas = new ArrayList<>();
 
         //implementa logica para login con:
         //-nombre usuario
@@ -55,8 +58,6 @@ public class Main {
         System.out.println("******************");
 
 
-        System.out.println("Digita una opcion: ");
-        menuOption=keyEntry.nextInt();
 
         do {
             try {
@@ -71,30 +72,51 @@ public class Main {
                 keyEntry.nextLine();
 
 
+
                 if (menuOption == 1) {
                     try {
+                        HashMap<String,Object> prenda = new HashMap<>();
                         System.out.print("Nombre de la prenda: ");
                         String nombre = keyEntry.nextLine();
+                        prenda.put("Nombre", nombre);
 
                         System.out.print("Talla (S/M/L/XL): ");
                         String talla = keyEntry.nextLine();
+                        prenda.put("Talla", talla);
 
                         System.out.print("Precio (entero): ");
                         int precio = Integer.parseInt(keyEntry.nextLine().trim());
+                        prenda.put("Precio", precio);
+                        prendas.add(prenda);
                         System.out.println(greenColor + "✅ Prenda guardada: " + nombre + " - " + talla + " - $" + precio);
                     } catch (NumberFormatException e) {
                         System.out.println(redColor + "Precio inválido. Debe ser un número entero." );
                     }
                 } else if (menuOption == 2) {
 
-                    //implementar algoritmo para recorrer y mostrar la lista en el formato pedido
-                    System.out.println(yellowColor + "📋 Inventario (demo):");
-                    System.out.println("- Camiseta | M | $45000");
-                    System.out.println("- Jean     | L | $120000");
+                    System.out.println(prendas);
+
+                    System.out.println("📋 Inventario:");
+
+                    for (HashMap<String, Object> prenda : prendas) {
+                        System.out.printf("- %-10s | %-3s | $%s%n",
+                                prenda.get("Nombre"),
+                                prenda.get("Talla"),
+                                prenda.get("Precio")
+                        );
+                    }
+
 
 
                 } else if (menuOption == 3) {
                     //implementar algoritmo para cerrar el programa
+                    System.out.print("¿Estas seguro que deseas salir?(ingresa si)");
+                    confirmarSalida = keyEntry.next();
+                    if (confirmarSalida.equals("si")){
+                        System.out.println("Hasta pronto");
+                        return;
+
+                    }
                 } else {
                     System.out.println(redColor + "Opción no válida. Prueba con un número del 1 al 5.");
                 }
