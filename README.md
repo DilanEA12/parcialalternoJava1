@@ -1,26 +1,26 @@
-# 🧵 Sistema de Login y Gestión de Prendas
+# Parcial 1 — Java 🤖
 
-Este proyecto contiene una versión corregida y mejorada de un sistema que incluye:
-
-- Implementación de un **login** utilizando un bucle `while` y condicionales.  
-- Corrección de diversos **errores de sintaxis** encontrados en la versión original.  
-- Creación de un **diccionario de prendas** usando `ArrayList` y `HashMap` para una mejor organización de datos.  
-- Incorporación de una **salida del programa con confirmación** para evitar cierres accidentales.  
+> **No olvides hacerle _FORK_ 😎**
 
 ---
 
-## 🚀 Características principales
+## ¡Energía Saiyajin para hoy! 🐉⚡
+> ¡Que hoy les suba el **ki** más que el **Kaio-ken** de Goku! 💥  
+> Que cada reto sea un **Saibaman** y ustedes, **Super Saiyajin**.  
+> Si se complica, respiren, junten energía y… **¡Genkidama de soluciones!** ✨  
+> **Shenlong** ya está avisado: deseo concedido = **¡éxito total!** 🐉
 
-### 🔐 Inicio de sesión
-- Uso de un bucle `while` para validar credenciales.
-- Comparación de usuario y contraseña con respuesta adecuada.
-- Reintentos hasta que se ingrese la información correcta.
+---
 
-### 🧺 Gestión de prendas
-- Implementación de un **HashMap** donde cada categoría contiene un `ArrayList` de prendas.
-- Permite agregar, listar y organizar las prendas de forma más estructurada.
+## Formulario de entrega 📝
+Completa tu entrega aquí: **[forms.gle/J8pbaRp4jBZANma5A](https://forms.gle/J8pbaRp4jBZANma5A)**
 
-**Ejemplo de estructura en Java:**
+---
 
-```java
-HashMap<String, ArrayList<String>> prendas = new HashMap<>();
+### Recordatorio rápido
+- ✅ Haz **FORK** del repositorio  
+- ✅ Trabaja en tu propia branch (ej. `feature/tu-nombre`)  
+- ✅ Haz **commit** con mensajes claros  
+- ✅ Crea tu **Pull Request** cuando termines
+
+> _“El límite es de +9000, pero tu código puede más.”_ 😎
